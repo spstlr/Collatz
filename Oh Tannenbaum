@@ -1,0 +1,52 @@
+
+public class Weihnachtsbaum {
+
+    public static void main(String[]args){
+        ohTannenbaum(15);
+        weihnachtsbaum(5);
+    }
+
+
+    public static void ohTannenbaum(int maxBreite){
+        int Breite=maxBreite+4;
+        for(int h=1;h<Breite/2;h++){
+            for(int a=h-1;a<maxBreite/2;a++){
+                System.out.print(" ");
+            }
+            for(int b=1;b<2*h;b++){
+                if(Math.random()<0.1){
+                    System.out.print("O");
+                }
+                else{System.out.print("'");}
+            }
+            System.out.println();
+        }
+        for(int a=0;a<maxBreite/2-1;a++){
+            System.out.print(" ");
+        }
+        System.out.print("|||");
+        System.out.println();
+    }
+
+    public static void weihnachtsbaum(int x){
+        int Breite=4*x+1;
+        for(int d=0;d<Breite/2;d+=2){
+        for(int c=d;c<d+6;c+=2){
+            for(int a=c;a<Breite/2+2;a++){
+                System.out.print(" ");
+            }
+            for(int b=0;b<2*c+1;b++){
+                if(Math.random()<0.1){
+                    System.out.print("O");
+                }
+                else{System.out.print("'");}
+            }
+            System.out.println();
+            }
+        }
+        for(int a=0;a<Breite/2+1;a++){
+            System.out.print(" ");
+        }
+        System.out.print("|||");
+    }
+}
